@@ -11,6 +11,8 @@ import { getMODISNDVI } from '../services/dataIngestion/nasaService'
 import { getCHIRPSData } from '../services/dataIngestion/chirpsService'
 import { getFEWSData } from '../services/dataIngestion/fewsNetService'
 import JobRun from '../models/JobRun'
+import Region from '../models/Region'
+import { getMockRegions } from '../data/mockData'
 
 const router = express.Router()
 
@@ -122,7 +124,7 @@ router.get('/test/all', async (req, res) => {
   res.json(results)
 })
 
-// Trigger full data ingestion
+// Trigger full data ingestion (POST)
 router.post('/ingest/all', async (req, res) => {
   try {
     const result = await ingestAllData()
@@ -130,6 +132,23 @@ router.post('/ingest/all', async (req, res) => {
       success: true, 
       message: 'Data ingestion completed',
       recordsProcessed: result.recordsProcessed 
+    })
+  } catch (error: any) {
+    res.status(500).json({ success: false, error: error.message })
+  }
+})
+
+// Trigger full data ingestion (GET - easier to use from browser)
+router.get('/trigger', async (req, res) => {
+  try {
+    res.json({ 
+      message: 'Data ingestion started in background. Check /status endpoint for progress.',
+      note: 'This may take a few minutes. Use /status to check progress.'
+    })
+    
+    // Run ingestion in background (don't wait for it)
+    ingestAllData().catch(err => {
+      console.error('Background data ingestion error:', err)
     })
   } catch (error: any) {
     res.status(500).json({ success: false, error: error.message })
@@ -169,6 +188,99 @@ router.get('/hdx/search', async (req, res) => {
     const query = (req.query.q as string) || 'somalia'
     const datasets = await searchHDXDatasets(query)
     res.json({ success: true, count: datasets.length, datasets })
+  } catch (error: any) {
+    res.status(500).json({ success: false, error: error.message })
+  }
+})
+
+// Seed database with initial regions (works with free Render - no shell needed!)
+router.post('/seed', async (req, res) => {
+  try {
+    const existingCount = await Region.countDocuments()
+    
+    if (existingCount > 0) {
+      return res.json({ 
+        success: true, 
+        message: `Database already has ${existingCount} regions. Use /seed?force=true to replace.`,
+        regionsCount: existingCount
+      })
+    }
+    
+    // Get mock data
+    const mockRegions = getMockRegions()
+    
+    // Transform and insert
+    const regionsToInsert = mockRegions.map(region => ({
+      id: region.id,
+      name: region.name,
+      nameSomali: region.nameSomali,
+      coordinates: region.coordinates,
+      droughtLevel: region.droughtLevel,
+      rainfallDeficit: region.rainfallDeficit,
+      lastRainfallDate: new Date(region.lastRainfallDate),
+      affectedPopulation: region.affectedPopulation,
+      ndvi: region.ndvi,
+      temperatureAnomaly: region.temperatureAnomaly,
+      waterScarcity: region.waterScarcity,
+      livestockRisk: region.livestockRisk,
+    }))
+    
+    await Region.insertMany(regionsToInsert)
+    
+    res.json({ 
+      success: true, 
+      message: `Seeded ${regionsToInsert.length} regions successfully`,
+      regionsCount: regionsToInsert.length
+    })
+  } catch (error: any) {
+    res.status(500).json({ success: false, error: error.message })
+  }
+})
+
+// Seed database with force option (GET for easier browser access)
+router.get('/seed', async (req, res) => {
+  try {
+    const force = req.query.force === 'true'
+    
+    if (force) {
+      await Region.deleteMany({})
+    } else {
+      const existingCount = await Region.countDocuments()
+      if (existingCount > 0) {
+        return res.json({ 
+          success: true, 
+          message: `Database already has ${existingCount} regions. Add ?force=true to replace.`,
+          regionsCount: existingCount
+        })
+      }
+    }
+    
+    // Get mock data
+    const mockRegions = getMockRegions()
+    
+    // Transform and insert
+    const regionsToInsert = mockRegions.map(region => ({
+      id: region.id,
+      name: region.name,
+      nameSomali: region.nameSomali,
+      coordinates: region.coordinates,
+      droughtLevel: region.droughtLevel,
+      rainfallDeficit: region.rainfallDeficit,
+      lastRainfallDate: new Date(region.lastRainfallDate),
+      affectedPopulation: region.affectedPopulation,
+      ndvi: region.ndvi,
+      temperatureAnomaly: region.temperatureAnomaly,
+      waterScarcity: region.waterScarcity,
+      livestockRisk: region.livestockRisk,
+    }))
+    
+    await Region.insertMany(regionsToInsert)
+    
+    res.json({ 
+      success: true, 
+      message: `Seeded ${regionsToInsert.length} regions successfully`,
+      regionsCount: regionsToInsert.length
+    })
   } catch (error: any) {
     res.status(500).json({ success: false, error: error.message })
   }
