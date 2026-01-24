@@ -7,11 +7,9 @@ const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/drough
 
 export const connectDB = async (): Promise<void> => {
   try {
-    const options = {
+    await mongoose.connect(MONGODB_URI, {
       serverSelectionTimeoutMS: 5000, // Timeout after 5s instead of 30s
-    }
-    
-    await mongoose.connect(MONGODB_URI, options)
+    } as mongoose.ConnectOptions)
     console.log('✅ MongoDB connected successfully')
     console.log(`📊 Database: ${mongoose.connection.name}`)
   } catch (error) {

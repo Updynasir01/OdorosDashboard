@@ -4,6 +4,19 @@ Fast deployment steps for MongoDB Atlas + Render + Vercel
 
 ---
 
+## 🔐 Your MongoDB Atlas Credentials
+
+**Username:** `globalpoliticsnetwork_db_user`  
+**Password:** `EwD9tOew9JeGmk1d`  
+**Cluster:** `somdroughts.0pasla0.mongodb.net`
+
+**Connection String (for Render):**
+```
+mongodb+srv://globalpoliticsnetwork_db_user:EwD9tOew9JeGmk1d@somdroughts.0pasla0.mongodb.net/drought_monitoring?retryWrites=true&w=majority
+```
+
+---
+
 ## 🎯 3-Step Deployment
 
 ### Step 1: MongoDB Atlas (5 minutes)
