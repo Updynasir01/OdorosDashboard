@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 import { Brain, TrendingUp, AlertCircle } from 'lucide-react'
 import { Prediction } from '../types'
 import { apiService } from '../services/api'
-import { useLanguage } from '../contexts/LanguageContext'
 
 interface PredictionsPanelProps {
   regionId?: string
@@ -16,7 +15,6 @@ const riskColors = {
 }
 
 function PredictionsPanel({ regionId }: PredictionsPanelProps) {
-  const { t } = useLanguage()
   const [predictions, setPredictions] = useState<Prediction[]>([])
   const [loading, setLoading] = useState(true)
 

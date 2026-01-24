@@ -1,5 +1,5 @@
-import { useEffect, useRef } from 'react'
-import { MapContainer, TileLayer, GeoJSON, Popup, useMap } from 'react-leaflet'
+import { useEffect } from 'react'
+import { MapContainer, TileLayer, GeoJSON, useMap } from 'react-leaflet'
 import { Region } from '../types'
 import { useLanguage } from '../contexts/LanguageContext'
 import 'leaflet/dist/leaflet.css'
