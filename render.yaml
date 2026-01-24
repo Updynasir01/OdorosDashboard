@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: somalia-drought-backend
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: MONGODB_URI
+        sync: false  # Set this in Render dashboard
+      - key: CORS_ORIGIN
+        sync: false  # Set this after deploying frontend
+      - key: NASA_BEARER_TOKEN
+        sync: false  # Set this in Render dashboard
+

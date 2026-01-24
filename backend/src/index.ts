@@ -53,6 +53,10 @@ app.get('/api/health', (req, res) => {
 })
 
 app.listen(PORT, () => {
-  console.log(`🚀 Server running on http://localhost:${PORT}`)
+  console.log(`🚀 Server running on port ${PORT}`)
+  console.log(`🌍 Environment: ${process.env.NODE_ENV || 'development'}`)
+  if (process.env.NODE_ENV === 'production') {
+    console.log(`✅ Production mode - CORS enabled for: ${process.env.CORS_ORIGIN || 'all origins'}`)
+  }
 })
 

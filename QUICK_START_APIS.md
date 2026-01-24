@@ -83,6 +83,7 @@ You can set up a cron job or scheduled task to automatically fetch new data:
 ```bash
 npm install node-cron
 ```
+<!-- can we add a fund rising and citezen conturbution and social media engagement features and how can we add do we need that  before you a code give me anlyze and what do you think  -->
 
 Then create a scheduler script that runs `ingestAllData()` daily.
 
