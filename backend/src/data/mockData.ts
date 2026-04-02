@@ -5,6 +5,7 @@ import { Region, DroughtIndicator, Alert, TimeSeriesData, ImpactData, Prediction
 
 // Somalia regions with approximate coordinates (simplified polygons)
 const SOMALIA_REGIONS_DATA: Omit<Region, 'coordinates'>[] = [
+  { id: 'awdal', name: 'Awdal', nameSomali: 'Awdal', droughtLevel: 'watch', rainfallDeficit: 32, lastRainfallDate: '2024-01-21', affectedPopulation: 410000, ndvi: 0.40, temperatureAnomaly: 0.9, waterScarcity: 48, livestockRisk: 42 },
   { id: 'banadir', name: 'Banadir', nameSomali: 'Banaadir', droughtLevel: 'warning', rainfallDeficit: 45, lastRainfallDate: '2024-01-15', affectedPopulation: 2500000, ndvi: 0.35, temperatureAnomaly: 1.2, waterScarcity: 65, livestockRisk: 55 },
   { id: 'bay', name: 'Bay', nameSomali: 'Bay', droughtLevel: 'emergency', rainfallDeficit: 78, lastRainfallDate: '2023-11-20', affectedPopulation: 850000, ndvi: 0.18, temperatureAnomaly: 2.1, waterScarcity: 85, livestockRisk: 90 },
   { id: 'bakool', name: 'Bakool', nameSomali: 'Bakool', droughtLevel: 'emergency', rainfallDeficit: 82, lastRainfallDate: '2023-11-15', affectedPopulation: 420000, ndvi: 0.15, temperatureAnomaly: 2.3, waterScarcity: 90, livestockRisk: 95 },
@@ -26,6 +27,7 @@ const SOMALIA_REGIONS_DATA: Omit<Region, 'coordinates'>[] = [
 
 // Generate simplified polygon coordinates for each region (centered around approximate locations)
 const regionCenters: Record<string, [number, number]> = {
+  'awdal': [10.5, 43.5],
   'banadir': [2.0469, 45.3182],
   'bay': [2.75, 43.5],
   'bakool': [4.0, 44.0],

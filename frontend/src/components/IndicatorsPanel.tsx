@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Droplets, Leaf, Thermometer, Waves, Activity } from 'lucide-react'
+import { Droplets, Leaf, Thermometer, Waves, Activity, Sprout } from 'lucide-react'
 import { DroughtIndicator } from '../types'
 import { apiService } from '../services/api'
 import { useLanguage } from '../contexts/LanguageContext'
@@ -14,6 +14,7 @@ const iconMap = {
   temperature: Thermometer,
   water: Waves,
   livestock: Activity,
+  crops: Sprout,
 }
 
 function IndicatorsPanel({ regionId }: IndicatorsPanelProps) {
@@ -61,8 +62,8 @@ function IndicatorsPanel({ regionId }: IndicatorsPanelProps) {
 
   if (loading) {
     return (
-      <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
-        {[1, 2, 3, 4, 5].map((i) => (
+      <div className="grid grid-cols-1 md:grid-cols-6 gap-4">
+        {[1, 2, 3, 4, 5, 6].map((i) => (
           <div key={i} className="bg-white rounded-lg shadow p-4 animate-pulse">
             <div className="h-4 bg-gray-200 rounded w-3/4 mb-2"></div>
             <div className="h-8 bg-gray-200 rounded w-1/2"></div>
@@ -72,11 +73,35 @@ function IndicatorsPanel({ regionId }: IndicatorsPanelProps) {
     )
   }
 
+  const vegetation = indicators.find((indicator) => indicator.id === 'vegetation')
+  const displayIndicators = [...indicators]
+
+  // Add a simple crop-condition card derived from NDVI so users can
+  // quickly see crop health in percentage form.
+  if (vegetation) {
+    const cropValue = Math.max(0, Math.min(100, vegetation.value * 100))
+    const cropAverage = Math.max(0, Math.min(100, vegetation.historicalAverage * 100))
+    const cropTrend = cropValue >= cropAverage ? 'up' : 'down'
+
+    displayIndicators.push({
+      ...vegetation,
+      id: 'crops',
+      label: 'Crops',
+      value: cropValue,
+      historicalAverage: cropAverage,
+      trend: cropTrend,
+      unit: '%',
+    })
+  }
+
   return (
-    <div className="grid grid-cols-1 md:grid-cols-5 gap-4">
-      {indicators.map((indicator) => {
+    <div className="grid grid-cols-1 md:grid-cols-6 gap-4">
+      {displayIndicators.map((indicator) => {
         const Icon = iconMap[indicator.id as keyof typeof iconMap] || Droplets
-        const deviation = ((indicator.value - indicator.historicalAverage) / indicator.historicalAverage) * 100
+        const deviation =
+          indicator.historicalAverage === 0
+            ? 0
+            : ((indicator.value - indicator.historicalAverage) / indicator.historicalAverage) * 100
 
         return (
           <div

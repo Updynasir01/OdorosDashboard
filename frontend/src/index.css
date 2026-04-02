@@ -16,3 +16,12 @@ code {
     monospace;
 }
 
+/* Simplemaps Somalia: region names must stay dark on colored drought fills */
+#somalia-simplemap svg text {
+  fill: #111827 !important;
+  stroke: none !important;
+}
+#somalia-simplemap svg text:hover {
+  fill: #000000 !important;
+}
+

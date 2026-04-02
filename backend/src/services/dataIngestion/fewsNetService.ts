@@ -1,80 +1,133 @@
 /**
  * FEWS NET (Famine Early Warning Systems Network) Data Service
- * 
- * Public data available at: https://fews.net/
- * Some data requires registration, but most is publicly available
+ *
+ * Somalia FEWS resources are accessed via Harvest Portal.
  */
 
-import axios from 'axios'
+import { getHarvestPortalResourceData } from './harvestPortalService'
 
-const FEWS_NET_BASE = 'https://fews.net/'
+const FEWS_SOMALIA_FOOD_INSECURITY_RESOURCE_ID = 'f71147c0-1256-4415-9ea3-1e7fc9c20a87'
 
 export interface FEWSData {
   date: string
   region: string
-  foodSecurityPhase: string
+  foodSecurityPhase: 'minimal' | 'stressed' | 'crisis' | 'emergency' | 'famine'
+  scenario: 'CS' | 'ML1' | 'ML2'
   rainfall: number
   populationAffected: number
 }
 
+function normalize(value: unknown): string {
+  return String(value || '').trim().toLowerCase()
+}
+
+function toPhase(value: unknown): FEWSData['foodSecurityPhase'] | null {
+  const raw = normalize(value)
+  if (!raw) return null
+
+  const numericMatch = raw.match(/[1-5]/)
+  if (numericMatch) {
+    switch (numericMatch[0]) {
+      case '1':
+        return 'minimal'
+      case '2':
+        return 'stressed'
+      case '3':
+        return 'crisis'
+      case '4':
+        return 'emergency'
+      case '5':
+        return 'famine'
+    }
+  }
+
+  if (raw.includes('minimal')) return 'minimal'
+  if (raw.includes('stressed')) return 'stressed'
+  if (raw.includes('crisis')) return 'crisis'
+  if (raw.includes('emergency')) return 'emergency'
+  if (raw.includes('famine')) return 'famine'
+  return null
+}
+
+function pickScenarioPhase(properties: Record<string, unknown>): { scenario: FEWSData['scenario']; phase: FEWSData['foodSecurityPhase'] } | null {
+  const scenarioCandidates: Array<{ scenario: FEWSData['scenario']; keys: string[] }> = [
+    { scenario: 'CS', keys: ['cs', 'current_situation', 'current', 'phase_cs'] },
+    { scenario: 'ML1', keys: ['ml1', 'phase_ml1'] },
+    { scenario: 'ML2', keys: ['ml2', 'phase_ml2'] },
+  ]
+
+  for (const candidate of scenarioCandidates) {
+    for (const [key, value] of Object.entries(properties)) {
+      const nk = normalize(key)
+      if (!candidate.keys.some((k) => nk === k || nk.includes(k))) continue
+      const phase = toPhase(value)
+      if (phase) {
+        return { scenario: candidate.scenario, phase }
+      }
+    }
+  }
+
+  for (const value of Object.values(properties)) {
+    const phase = toPhase(value)
+    if (phase) {
+      return { scenario: 'CS', phase }
+    }
+  }
+
+  return null
+}
+
+function pickRegionName(properties: Record<string, unknown>): string {
+  return String(
+    properties.region ||
+      properties.Region ||
+      properties.adm1_name ||
+      properties.ADMIN1 ||
+      properties.shapeName ||
+      properties.name ||
+      ''
+  ).trim()
+}
+
 /**
- * Get FEWS NET data for Somalia
- * 
- * Note: FEWS NET often provides data as downloadable files
- * rather than REST APIs. You may need to:
- * 1. Download CSV/Excel files from their website
- * 2. Parse and import into MongoDB
- * 3. Or use their data portal API if available
+ * Get FEWS food insecurity data for Somalia from Harvest Portal.
  */
 export async function getFEWSData(region?: string): Promise<FEWSData[]> {
-  try {
-    // FEWS NET data portal
-    // Check: https://fews.net/fews-data/33 for Somalia-specific data
-    
-    // Example: If they have an API endpoint
-    // const response = await axios.get(`${FEWS_NET_BASE}api/v1/data`, {
-    //   params: {
-    //     country: 'somalia',
-    //     region: region,
-    //   },
-    // })
-    
-    console.log('Fetching FEWS NET data for Somalia')
-    
-    // For now, return placeholder
-    // In production, you would:
-    // 1. Download their CSV files
-    // 2. Parse using csv-parser or similar
-    // 3. Transform to your data format
-    return []
-  } catch (error) {
-    console.error('Error fetching FEWS NET data:', error)
-    throw error
+  const payload = await getHarvestPortalResourceData(FEWS_SOMALIA_FOOD_INSECURITY_RESOURCE_ID)
+  if (!payload) return []
+
+  const features = Array.isArray(payload?.features) ? payload.features : []
+  const out: FEWSData[] = []
+  const today = new Date().toISOString().split('T')[0]
+
+  for (const feature of features) {
+    const props = (feature?.properties || {}) as Record<string, unknown>
+    const regionName = pickRegionName(props)
+    if (!regionName) continue
+
+    if (region && normalize(regionName) !== normalize(region)) continue
+
+    const scenario = pickScenarioPhase(props)
+    if (!scenario) continue
+
+    out.push({
+      date: today,
+      region: regionName,
+      foodSecurityPhase: scenario.phase,
+      scenario: scenario.scenario,
+      rainfall: 0,
+      populationAffected: 0,
+    })
   }
+
+  return out
 }
 
 /**
  * Download and parse FEWS NET CSV files
  */
 export async function parseFEWSCSV(fileUrl: string): Promise<FEWSData[]> {
-  try {
-    // Download CSV file
-    // const response = await axios.get(fileUrl, { responseType: 'text' })
-    // Parse CSV
-    // const csv = require('csv-parser')
-    // const results = []
-    // 
-    // response.data
-    //   .pipe(csv())
-    //   .on('data', (data) => results.push(data))
-    //   .on('end', () => {
-    //     return results
-    //   })
-    
-    return []
-  } catch (error) {
-    console.error('Error parsing FEWS CSV:', error)
-    throw error
-  }
+  void fileUrl
+  return []
 }
 

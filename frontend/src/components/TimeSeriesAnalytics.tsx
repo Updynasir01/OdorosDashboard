@@ -121,7 +121,7 @@ function TimeSeriesAnalytics({ regionId }: TimeSeriesAnalyticsProps) {
           <select
             value={months}
             onChange={(e) => setMonths(Number(e.target.value))}
-            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-[#05556c]"
           >
             <option value={3}>Last 3 months</option>
             <option value={6}>Last 6 months</option>
@@ -130,7 +130,8 @@ function TimeSeriesAnalytics({ regionId }: TimeSeriesAnalyticsProps) {
           <button
             onClick={handleDownload}
             disabled={data.length === 0}
-            className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed"
+            className="flex items-center gap-2 px-4 py-2 text-white rounded-md transition-colors disabled:bg-gray-400 disabled:cursor-not-allowed"
+            style={{ backgroundColor: '#05556c' }}
           >
             <Download className="w-4 h-4" />
             Download
