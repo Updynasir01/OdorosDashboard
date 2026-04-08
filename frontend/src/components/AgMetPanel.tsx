@@ -1,5 +1,16 @@
 import { useEffect, useMemo, useState } from 'react'
-import { ExternalLink, BarChart3 } from 'lucide-react'
+import {
+  ExternalLink,
+  BarChart3,
+  Droplets,
+  Leaf,
+  Thermometer,
+  Waves,
+  Activity,
+  Sprout,
+  LineChart,
+  type LucideIcon,
+} from 'lucide-react'
 import { agmetService, type AgMetAvailableGraphicItem } from '../services/agmet'
 
 interface AgMetPanelProps {
@@ -19,6 +30,11 @@ function titleFromUrl(url: string): string {
   return indicator.replace(/[-_]/g, ' ')
 }
 
+function slugFromUrl(url: string): string {
+  const raw = titleFromUrl(url)
+  return raw.toLowerCase().trim().split(/\s+/)[0] || 'chart'
+}
+
 function prettyIndicatorName(raw: string): string {
   const s = raw.toLowerCase().trim()
   const map: Record<string, string> = {
@@ -32,6 +48,18 @@ function prettyIndicatorName(raw: string): string {
     soil: 'Soil water fraction',
   }
   return map[s] || raw.charAt(0).toUpperCase() + raw.slice(1)
+}
+
+const agmetIconBySlug: Record<string, LucideIcon> = {
+  condition: Sprout,
+  ndvi: Leaf,
+  precip: Droplets,
+  precipitation: Droplets,
+  temperature: Thermometer,
+  swf: Waves,
+  soil: Waves,
+  esi: Activity,
+  chart: LineChart,
 }
 
 function guessRegionDisplayNameFromId(regionId?: string): string {
@@ -139,9 +167,13 @@ function AgMetPanel({ regionId }: AgMetPanelProps) {
       ) : null}
 
       {loading ? (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {[1, 2, 3].map((i) => (
-            <div key={i} className="h-56 bg-gray-100 rounded animate-pulse" />
+        <div className="grid grid-cols-1 md:grid-cols-6 gap-4">
+          {[1, 2, 3, 4, 5, 6].map((i) => (
+            <div key={i} className="bg-white rounded-lg shadow p-4 animate-pulse">
+              <div className="h-4 bg-gray-200 rounded w-3/4 mb-2" />
+              <div className="h-20 bg-gray-200 rounded w-full mb-2" />
+              <div className="h-3 bg-gray-200 rounded w-1/2" />
+            </div>
           ))}
         </div>
       ) : error ? (
@@ -154,29 +186,43 @@ function AgMetPanel({ regionId }: AgMetPanelProps) {
       ) : graphics.length === 0 ? (
         <p className="text-gray-500 text-center py-6">No AgMet charts available for this selection.</p>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 md:grid-cols-6 gap-4">
           {graphics.map((g) => {
             const rawTitle = titleFromUrl(g.url)
+            const slug = slugFromUrl(g.url)
+            const Icon = agmetIconBySlug[slug] || agmetIconBySlug.chart
+            const label = prettyIndicatorName(rawTitle)
             return (
               <a
                 key={g.url}
                 href={g.url}
                 target="_blank"
                 rel="noreferrer"
-                className="group border border-gray-200 rounded-lg overflow-hidden hover:shadow-md transition-shadow bg-white"
+                className="group bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition-shadow block"
               >
-                <div className="p-3 border-b border-gray-100">
-                  <p className="text-sm font-semibold text-gray-900">{prettyIndicatorName(rawTitle)}</p>
-                  <p className="text-xs text-gray-500 truncate">{g.url}</p>
+                <div className="flex items-center justify-between mb-2">
+                  <Icon className="w-5 h-5 text-blue-600" />
+                  <span className="text-lg font-bold text-green-600" title="Live AgMet chart">
+                    ↗
+                  </span>
                 </div>
-                <div className="bg-gray-50">
+                <h3 className="text-sm font-medium text-gray-700 mb-1 line-clamp-2">{label}</h3>
+                <div className="mt-1 mb-2 h-24 w-full rounded-md bg-gray-50 border border-gray-100 overflow-hidden">
                   <img
                     src={g.url}
-                    alt={`AgMet chart: ${rawTitle}`}
+                    alt={`AgMet: ${label}`}
                     loading="lazy"
-                    className="w-full h-56 object-contain bg-white group-hover:bg-gray-50"
+                    className="w-full h-full object-contain bg-white group-hover:bg-gray-50"
                   />
                 </div>
+                <p className="text-xs text-gray-500 mt-1">
+                  Season: {g.cropSeasonYearCode || selectedCropSeasonYear || '—'}
+                </p>
+                <p className="text-xs mt-1 text-gray-600">
+                  <span className="inline-flex items-center gap-1">
+                    Open full chart <ExternalLink className="w-3 h-3" />
+                  </span>
+                </p>
               </a>
             )
           })}
