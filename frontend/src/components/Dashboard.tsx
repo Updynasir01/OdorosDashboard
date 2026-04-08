@@ -8,7 +8,6 @@ import TimeSeriesAnalytics from './TimeSeriesAnalytics'
 import AlertsPanel from './AlertsPanel'
 import ImpactLayer from './ImpactLayer'
 import PredictionsPanel from './PredictionsPanel'
-import AgMetPanel from './AgMetPanel'
 import { apiService } from '../services/api'
 
 function Dashboard() {
@@ -71,11 +70,6 @@ function Dashboard() {
         {/* Time Series Analytics */}
         <div className="mt-6">
           <TimeSeriesAnalytics regionId={selectedRegion || undefined} />
-        </div>
-
-        {/* AgMet (Real EO charts) */}
-        <div className="mt-6">
-          <AgMetPanel regionId={selectedRegion || undefined} />
         </div>
 
         {/* Impact & Vulnerability */}
