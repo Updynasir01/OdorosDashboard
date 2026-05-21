@@ -1,4 +1,5 @@
 import { Globe } from 'lucide-react'
+import { Link, useLocation } from 'react-router-dom'
 import { useLanguage } from '../contexts/LanguageContext'
 
 interface TopBarProps {
@@ -30,8 +31,14 @@ const SOMALIA_REGIONS = [
   { id: 'woqooyi-galbeed', name: 'Woqooyi Galbeed', nameSomali: 'Woqooyi Galbeed' },
 ]
 
+const navLinkClass = (active: boolean) =>
+  `text-sm font-medium px-3 py-1.5 rounded-md transition-colors ${
+    active ? 'bg-[#05556c] text-white' : 'text-gray-700 hover:bg-gray-100'
+  }`
+
 function TopBar({ selectedRegion, onRegionChange, dateRange, onDateRangeChange }: TopBarProps) {
   const { language, setLanguage, t } = useLanguage()
+  const location = useLocation()
 
   const today = new Date().toISOString().split('T')[0]
   const threeMonthsAgo = new Date()
@@ -51,19 +58,12 @@ function TopBar({ selectedRegion, onRegionChange, dateRange, onDateRangeChange }
       <div className="h-1 w-full" style={{ backgroundColor: '#05556c' }}></div>
       <div className="container mx-auto px-4 py-4">
         <div className="flex flex-wrap items-center gap-4">
-          <div className="flex items-center gap-3 min-w-[220px]">
-            <div
-              className="w-10 h-10 rounded-lg flex items-center justify-center text-white font-bold shadow-sm"
-              style={{ backgroundColor: '#05556c' }}
-            >
-              O
-            </div>
-            <div className="leading-tight">
-              <p className="font-semibold text-gray-900">Odoros</p>
-              <p className="text-xs font-medium" style={{ color: '#05556c' }}>
-                Drought Intelligence
-              </p>
-            </div>
+          <div className="flex items-center min-w-[220px]">
+            <img
+              src="/odoros-logo.png"
+              alt="Odoros"
+              className="h-14 w-auto object-contain"
+            />
           </div>
 
           {/* Region Selector */}
@@ -128,6 +128,19 @@ function TopBar({ selectedRegion, onRegionChange, dateRange, onDateRangeChange }
               ></span>
             </button>
           </div>
+        </div>
+
+        <div className="flex flex-wrap items-center gap-2 mt-3 pt-3 border-t border-gray-100">
+          <span className="text-xs font-semibold text-gray-500 uppercase tracking-wide mr-1">Views</span>
+          <Link to="/" className={navLinkClass(location.pathname === '/')}>
+            Dashboard
+          </Link>
+          <Link to="/odoros" className={navLinkClass(location.pathname === '/odoros')}>
+            Odoros crops
+          </Link>
+          <Link to="/trade" className={navLinkClass(location.pathname === '/trade')}>
+            Trade flows
+          </Link>
         </div>
       </div>
     </div>

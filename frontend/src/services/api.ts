@@ -56,12 +56,14 @@ export const apiService = {
     try {
       const response = await api.get('/indicators', {
         params: regionId ? { region: regionId } : {},
+        /** Backend calls NASA POWER + many GLAM tiles; allow long wait or skeleton never ends. */
+        timeout: 120000,
       })
       const data = response.data as DroughtIndicator[]
-      if (!Array.isArray(data) || data.length === 0) return getMockIndicators(regionId)
+      if (!Array.isArray(data)) return []
       return data
     } catch {
-      return getMockIndicators(regionId)
+      return []
     }
   },
 

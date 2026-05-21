@@ -22,6 +22,14 @@ export const SIMPLEMAP_CODE_TO_REGION_ID: Record<string, string> = {
   SOWO: 'woqooyi-galbeed',
 }
 
+const REGION_ID_TO_SIMPLEMAP_CODE: Record<string, string> = Object.entries(SIMPLEMAP_CODE_TO_REGION_ID).reduce(
+  (acc, [code, regionId]) => {
+    acc[regionId] = code
+    return acc
+  },
+  {} as Record<string, string>
+)
+
 const MAP_CONTAINER_ID = 'somalia-simplemap'
 
 export function getSimplemapContainerId(): string {
@@ -63,6 +71,8 @@ export function loadSomaliaSimplemapsScripts(): Promise<void> {
     m.div = MAP_CONTAINER_ID
     m.url_new_tab = 'no'
     m.auto_load = 'no'
+    // Allow built-in state zoom on click (used by the AgMet page map UX).
+    m.all_states_zoomable = 'yes'
     // Dark labels so names stay readable on yellow/orange/green region fills (library default is white)
     m.label_color = '#111827'
     m.label_hover_color = '#000000'
@@ -159,4 +169,58 @@ export function attachSimplemapClickHandler(onSelect: (regionId: string) => void
     const regionId = SIMPLEMAP_CODE_TO_REGION_ID[id]
     if (regionId) onSelect(regionId)
   }
+}
+
+function getMapSvg(): SVGSVGElement | null {
+  const root = document.getElementById(MAP_CONTAINER_ID)
+  if (!root) return null
+  return root.querySelector('svg')
+}
+
+function ensureOriginalViewBox(svg: SVGSVGElement): string {
+  const existing = svg.getAttribute('data-original-viewBox')
+  if (existing) return existing
+  const vb = svg.getAttribute('viewBox')
+  // If no viewBox is set, create one from the current bounds.
+  const initial =
+    vb ||
+    (() => {
+      const r = svg.getBoundingClientRect()
+      return `0 0 ${Math.max(1, Math.round(r.width))} ${Math.max(1, Math.round(r.height))}`
+    })()
+  svg.setAttribute('data-original-viewBox', initial)
+  if (!vb) svg.setAttribute('viewBox', initial)
+  return initial
+}
+
+export function zoomSimplemapToRegion(regionId: string | null): void {
+  const svg = getMapSvg()
+  if (!svg) return
+  const original = ensureOriginalViewBox(svg)
+
+  if (!regionId) {
+    svg.setAttribute('viewBox', original)
+    return
+  }
+
+  const code = REGION_ID_TO_SIMPLEMAP_CODE[regionId]
+  if (!code) return
+
+  // Simplemaps states are usually <path id="SOAW"> or wrapped groups with that id.
+  const target = (svg.querySelector(`#${CSS.escape(code)}`) as SVGGraphicsElement | null) ||
+    (svg.querySelector(`[id="${code}"]`) as SVGGraphicsElement | null)
+  if (!target || typeof (target as any).getBBox !== 'function') return
+
+  const box = target.getBBox()
+  if (!Number.isFinite(box.x) || !Number.isFinite(box.y) || !Number.isFinite(box.width) || !Number.isFinite(box.height)) return
+
+  // Pad a bit so the region isn't flush to edges.
+  const padX = box.width * 0.35
+  const padY = box.height * 0.35
+  const x = Math.max(0, box.x - padX)
+  const y = Math.max(0, box.y - padY)
+  const w = box.width + padX * 2
+  const h = box.height + padY * 2
+
+  svg.setAttribute('viewBox', `${x} ${y} ${Math.max(1, w)} ${Math.max(1, h)}`)
 }

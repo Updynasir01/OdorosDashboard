@@ -1,0 +1,2082 @@
+[
+  {
+    "Country Code": 2,
+    "Country": "Afghanistan",
+    "M49 Code": "004",
+    "ISO2 Code": "AF",
+    "ISO3 Code": "AFG",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "4"
+  },
+  {
+    "Country Code": 3,
+    "Country": "Albania",
+    "M49 Code": "008",
+    "ISO2 Code": "AL",
+    "ISO3 Code": "ALB",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "8"
+  },
+  {
+    "Country Code": 4,
+    "Country": "Algeria",
+    "M49 Code": "012",
+    "ISO2 Code": "DZ",
+    "ISO3 Code": "DZA",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "12"
+  },
+  {
+    "Country Code": 5,
+    "Country": "American Samoa",
+    "M49 Code": "016",
+    "ISO2 Code": "AS",
+    "ISO3 Code": "ASM",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "16"
+  },
+  {
+    "Country Code": 6,
+    "Country": "Andorra",
+    "M49 Code": "020",
+    "ISO2 Code": "AD",
+    "ISO3 Code": "AND",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "20"
+  },
+  {
+    "Country Code": 7,
+    "Country": "Angola",
+    "M49 Code": "024",
+    "ISO2 Code": "AO",
+    "ISO3 Code": "AGO",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "24"
+  },
+  {
+    "Country Code": 258,
+    "Country": "Anguilla",
+    "M49 Code": 660,
+    "ISO2 Code": "AI",
+    "ISO3 Code": "AIA",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "660"
+  },
+  {
+    "Country Code": 8,
+    "Country": "Antigua and Barbuda",
+    "M49 Code": "028",
+    "ISO2 Code": "AG",
+    "ISO3 Code": "ATG",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "28"
+  },
+  {
+    "Country Code": 9,
+    "Country": "Argentina",
+    "M49 Code": "032",
+    "ISO2 Code": "AR",
+    "ISO3 Code": "ARG",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "32"
+  },
+  {
+    "Country Code": 1,
+    "Country": "Armenia",
+    "M49 Code": "051",
+    "ISO2 Code": "AM",
+    "ISO3 Code": "ARM",
+    "Start Year": 1992,
+    "End Year": "",
+    "ResourceTrade_M49": "51"
+  },
+  {
+    "Country Code": 22,
+    "Country": "Aruba",
+    "M49 Code": 533,
+    "ISO2 Code": "AW",
+    "ISO3 Code": "ABW",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "533"
+  },
+  {
+    "Country Code": 10,
+    "Country": "Australia",
+    "M49 Code": "036",
+    "ISO2 Code": "AU",
+    "ISO3 Code": "AUS",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "36"
+  },
+  {
+    "Country Code": 11,
+    "Country": "Austria",
+    "M49 Code": "040",
+    "ISO2 Code": "AT",
+    "ISO3 Code": "AUT",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "40"
+  },
+  {
+    "Country Code": 52,
+    "Country": "Azerbaijan",
+    "M49 Code": "031",
+    "ISO2 Code": "AZ",
+    "ISO3 Code": "AZE",
+    "Start Year": 1992,
+    "End Year": "",
+    "ResourceTrade_M49": "31"
+  },
+  {
+    "Country Code": 12,
+    "Country": "Bahamas",
+    "M49 Code": "044",
+    "ISO2 Code": "BS",
+    "ISO3 Code": "BHS",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "44"
+  },
+  {
+    "Country Code": 13,
+    "Country": "Bahrain",
+    "M49 Code": "048",
+    "ISO2 Code": "BH",
+    "ISO3 Code": "BHR",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "48"
+  },
+  {
+    "Country Code": 16,
+    "Country": "Bangladesh",
+    "M49 Code": "050",
+    "ISO2 Code": "BD",
+    "ISO3 Code": "BGD",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "50"
+  },
+  {
+    "Country Code": 14,
+    "Country": "Barbados",
+    "M49 Code": "052",
+    "ISO2 Code": "BB",
+    "ISO3 Code": "BRB",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "52"
+  },
+  {
+    "Country Code": 57,
+    "Country": "Belarus",
+    "M49 Code": 112,
+    "ISO2 Code": "BY",
+    "ISO3 Code": "BLR",
+    "Start Year": 1992,
+    "End Year": "",
+    "ResourceTrade_M49": "112"
+  },
+  {
+    "Country Code": 255,
+    "Country": "Belgium",
+    "M49 Code": "056",
+    "ISO2 Code": "BE",
+    "ISO3 Code": "BEL",
+    "Start Year": 2000,
+    "End Year": "",
+    "ResourceTrade_M49": "56"
+  },
+  {
+    "Country Code": 23,
+    "Country": "Belize",
+    "M49 Code": "084",
+    "ISO2 Code": "BZ",
+    "ISO3 Code": "BLZ",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "84"
+  },
+  {
+    "Country Code": 53,
+    "Country": "Benin",
+    "M49 Code": 204,
+    "ISO2 Code": "BJ",
+    "ISO3 Code": "BEN",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "204"
+  },
+  {
+    "Country Code": 17,
+    "Country": "Bermuda",
+    "M49 Code": "060",
+    "ISO2 Code": "BM",
+    "ISO3 Code": "BMU",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "60"
+  },
+  {
+    "Country Code": 18,
+    "Country": "Bhutan",
+    "M49 Code": "064",
+    "ISO2 Code": "BT",
+    "ISO3 Code": "BTN",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "64"
+  },
+  {
+    "Country Code": 19,
+    "Country": "Bolivia (Plurinational State of)",
+    "M49 Code": "068",
+    "ISO2 Code": "BO",
+    "ISO3 Code": "BOL",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "68"
+  },
+  {
+    "Country Code": 278,
+    "Country": "Bonaire, Sint Eustatius and Saba",
+    "M49 Code": 535,
+    "ISO2 Code": "F278",
+    "ISO3 Code": "BES",
+    "Start Year": 2011,
+    "End Year": "",
+    "ResourceTrade_M49": "535"
+  },
+  {
+    "Country Code": 80,
+    "Country": "Bosnia and Herzegovina",
+    "M49 Code": "070",
+    "ISO2 Code": "BA",
+    "ISO3 Code": "BIH",
+    "Start Year": 1992,
+    "End Year": "",
+    "ResourceTrade_M49": "70"
+  },
+  {
+    "Country Code": 20,
+    "Country": "Botswana",
+    "M49 Code": "072",
+    "ISO2 Code": "BW",
+    "ISO3 Code": "BWA",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "72"
+  },
+  {
+    "Country Code": 21,
+    "Country": "Brazil",
+    "M49 Code": "076",
+    "ISO2 Code": "BR",
+    "ISO3 Code": "BRA",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "76"
+  },
+  {
+    "Country Code": 26,
+    "Country": "Brunei Darussalam",
+    "M49 Code": "096",
+    "ISO2 Code": "BN",
+    "ISO3 Code": "BRN",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "96"
+  },
+  {
+    "Country Code": 27,
+    "Country": "Bulgaria",
+    "M49 Code": 100,
+    "ISO2 Code": "BG",
+    "ISO3 Code": "BGR",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "100"
+  },
+  {
+    "Country Code": 233,
+    "Country": "Burkina Faso",
+    "M49 Code": 854,
+    "ISO2 Code": "BF",
+    "ISO3 Code": "BFA",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "854"
+  },
+  {
+    "Country Code": 29,
+    "Country": "Burundi",
+    "M49 Code": 108,
+    "ISO2 Code": "BI",
+    "ISO3 Code": "BDI",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "108"
+  },
+  {
+    "Country Code": 115,
+    "Country": "Cambodia",
+    "M49 Code": 116,
+    "ISO2 Code": "KH",
+    "ISO3 Code": "KHM",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "116"
+  },
+  {
+    "Country Code": 32,
+    "Country": "Cameroon",
+    "M49 Code": 120,
+    "ISO2 Code": "CM",
+    "ISO3 Code": "CMR",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "120"
+  },
+  {
+    "Country Code": 33,
+    "Country": "Canada",
+    "M49 Code": 124,
+    "ISO2 Code": "CA",
+    "ISO3 Code": "CAN",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "124"
+  },
+  {
+    "Country Code": 37,
+    "Country": "Central African Republic",
+    "M49 Code": 140,
+    "ISO2 Code": "CF",
+    "ISO3 Code": "CAF",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "140"
+  },
+  {
+    "Country Code": 39,
+    "Country": "Chad",
+    "M49 Code": 148,
+    "ISO2 Code": "TD",
+    "ISO3 Code": "TCD",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "148"
+  },
+  {
+    "Country Code": 40,
+    "Country": "Chile",
+    "M49 Code": 152,
+    "ISO2 Code": "CL",
+    "ISO3 Code": "CHL",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "152"
+  },
+  {
+    "Country Code": 96,
+    "Country": "China, Hong Kong SAR",
+    "M49 Code": 344,
+    "ISO2 Code": "HK",
+    "ISO3 Code": "HKG",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "344"
+  },
+  {
+    "Country Code": 128,
+    "Country": "China, Macao SAR",
+    "M49 Code": 446,
+    "ISO2 Code": "MO",
+    "ISO3 Code": "MAC",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "446"
+  },
+  {
+    "Country Code": 41,
+    "Country": "China, mainland",
+    "M49 Code": 156,
+    "ISO2 Code": "CN",
+    "ISO3 Code": "CHN",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "156"
+  },
+  {
+    "Country Code": 214,
+    "Country": "Taiwan",
+    "M49 Code": 158,
+    "ISO2 Code": "TW",
+    "ISO3 Code": "TWN",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": ""
+  },
+  {
+    "Country Code": 44,
+    "Country": "Colombia",
+    "M49 Code": 170,
+    "ISO2 Code": "CO",
+    "ISO3 Code": "COL",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "170"
+  },
+  {
+    "Country Code": 45,
+    "Country": "Comoros",
+    "M49 Code": 174,
+    "ISO2 Code": "KM",
+    "ISO3 Code": "COM",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "174"
+  },
+  {
+    "Country Code": 46,
+    "Country": "Congo",
+    "M49 Code": 178,
+    "ISO2 Code": "CG",
+    "ISO3 Code": "COG",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "178"
+  },
+  {
+    "Country Code": 48,
+    "Country": "Costa Rica",
+    "M49 Code": 188,
+    "ISO2 Code": "CR",
+    "ISO3 Code": "CRI",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "188"
+  },
+  {
+    "Country Code": 107,
+    "Country": "Côte d'Ivoire",
+    "M49 Code": 384,
+    "ISO2 Code": "CI",
+    "ISO3 Code": "CIV",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "384"
+  },
+  {
+    "Country Code": 98,
+    "Country": "Croatia",
+    "M49 Code": 191,
+    "ISO2 Code": "HR",
+    "ISO3 Code": "HRV",
+    "Start Year": 1992,
+    "End Year": "",
+    "ResourceTrade_M49": "191"
+  },
+  {
+    "Country Code": 49,
+    "Country": "Cuba",
+    "M49 Code": 192,
+    "ISO2 Code": "CU",
+    "ISO3 Code": "CUB",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "192"
+  },
+  {
+    "Country Code": 279,
+    "Country": "Curaçao",
+    "M49 Code": 531,
+    "ISO2 Code": "F279",
+    "ISO3 Code": "CUW",
+    "Start Year": 2011,
+    "End Year": "",
+    "ResourceTrade_M49": "531"
+  },
+  {
+    "Country Code": 50,
+    "Country": "Cyprus",
+    "M49 Code": 196,
+    "ISO2 Code": "CY",
+    "ISO3 Code": "CYP",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "196"
+  },
+  {
+    "Country Code": 167,
+    "Country": "Czechia",
+    "M49 Code": 203,
+    "ISO2 Code": "CZ",
+    "ISO3 Code": "CZE",
+    "Start Year": 1993,
+    "End Year": "",
+    "ResourceTrade_M49": "203"
+  },
+  {
+    "Country Code": 51,
+    "Country": "Czechoslovakia",
+    "M49 Code": 200,
+    "ISO2 Code": "F51",
+    "ISO3 Code": "F51",
+    "Start Year": "",
+    "End Year": 1992
+  },
+  {
+    "Country Code": 116,
+    "Country": "Democratic People's Republic of Korea",
+    "M49 Code": 408,
+    "ISO2 Code": "KP",
+    "ISO3 Code": "PRK",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "408"
+  },
+  {
+    "Country Code": 250,
+    "Country": "Democratic Republic of the Congo",
+    "M49 Code": 180,
+    "ISO2 Code": "CD",
+    "ISO3 Code": "COD",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "180"
+  },
+  {
+    "Country Code": 54,
+    "Country": "Denmark",
+    "M49 Code": 208,
+    "ISO2 Code": "DK",
+    "ISO3 Code": "DNK",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "208"
+  },
+  {
+    "Country Code": 72,
+    "Country": "Djibouti",
+    "M49 Code": 262,
+    "ISO2 Code": "DJ",
+    "ISO3 Code": "DJI",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "262"
+  },
+  {
+    "Country Code": 55,
+    "Country": "Dominica",
+    "M49 Code": 212,
+    "ISO2 Code": "DM",
+    "ISO3 Code": "DMA",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "212"
+  },
+  {
+    "Country Code": 56,
+    "Country": "Dominican Republic",
+    "M49 Code": 214,
+    "ISO2 Code": "DO",
+    "ISO3 Code": "DOM",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "214"
+  },
+  {
+    "Country Code": 58,
+    "Country": "Ecuador",
+    "M49 Code": 218,
+    "ISO2 Code": "EC",
+    "ISO3 Code": "ECU",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "218"
+  },
+  {
+    "Country Code": 59,
+    "Country": "Egypt",
+    "M49 Code": 818,
+    "ISO2 Code": "EG",
+    "ISO3 Code": "EGY",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "818"
+  },
+  {
+    "Country Code": 60,
+    "Country": "El Salvador",
+    "M49 Code": 222,
+    "ISO2 Code": "SV",
+    "ISO3 Code": "SLV",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "222"
+  },
+  {
+    "Country Code": 61,
+    "Country": "Equatorial Guinea",
+    "M49 Code": 226,
+    "ISO2 Code": "GQ",
+    "ISO3 Code": "GNQ",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "226"
+  },
+  {
+    "Country Code": 178,
+    "Country": "Eritrea",
+    "M49 Code": 232,
+    "ISO2 Code": "ER",
+    "ISO3 Code": "ERI",
+    "Start Year": 1993,
+    "End Year": "",
+    "ResourceTrade_M49": "232"
+  },
+  {
+    "Country Code": 63,
+    "Country": "Estonia",
+    "M49 Code": 233,
+    "ISO2 Code": "EE",
+    "ISO3 Code": "EST",
+    "Start Year": 1992,
+    "End Year": "",
+    "ResourceTrade_M49": "233"
+  },
+  {
+    "Country Code": 209,
+    "Country": "Eswatini",
+    "M49 Code": 748,
+    "ISO2 Code": "SZ",
+    "ISO3 Code": "SWZ",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "748"
+  },
+  {
+    "Country Code": 238,
+    "Country": "Ethiopia",
+    "M49 Code": 231,
+    "ISO2 Code": "ET",
+    "ISO3 Code": "ETH",
+    "Start Year": 1993,
+    "End Year": "",
+    "ResourceTrade_M49": "231"
+  },
+  {
+    "Country Code": 62,
+    "Country": "Ethiopia PDR",
+    "M49 Code": 230,
+    "ISO2 Code": "F62",
+    "ISO3 Code": "F62",
+    "Start Year": "",
+    "End Year": 1992
+  },
+  {
+    "Country Code": 5707,
+    "Country": "European Union (27)",
+    "M49 Code": "097",
+    "ISO2 Code": "F5707",
+    "ISO3 Code": "F5707",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "97"
+  },
+  {
+    "Country Code": 66,
+    "Country": "Fiji",
+    "M49 Code": 242,
+    "ISO2 Code": "FJ",
+    "ISO3 Code": "FJI",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "242"
+  },
+  {
+    "Country Code": 67,
+    "Country": "Finland",
+    "M49 Code": 246,
+    "ISO2 Code": "FI",
+    "ISO3 Code": "FIN",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "246"
+  },
+  {
+    "Country Code": 68,
+    "Country": "France",
+    "M49 Code": 250,
+    "ISO2 Code": "FR",
+    "ISO3 Code": "FRA",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "251"
+  },
+  
+  {
+    "Country Code": 74,
+    "Country": "Gabon",
+    "M49 Code": 266,
+    "ISO2 Code": "GA",
+    "ISO3 Code": "GAB",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "266"
+  },
+  {
+    "Country Code": 75,
+    "Country": "Gambia",
+    "M49 Code": 270,
+    "ISO2 Code": "GM",
+    "ISO3 Code": "GMB",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "270"
+  },
+  {
+    "Country Code": 73,
+    "Country": "Georgia",
+    "M49 Code": 268,
+    "ISO2 Code": "GE",
+    "ISO3 Code": "GEO",
+    "Start Year": 1992,
+    "End Year": "",
+    "ResourceTrade_M49": "268"
+  },
+  {
+    "Country Code": 79,
+    "Country": "Germany",
+    "M49 Code": 276,
+    "ISO2 Code": "DE",
+    "ISO3 Code": "DEU",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "276"
+  },
+  {
+    "Country Code": 81,
+    "Country": "Ghana",
+    "M49 Code": 288,
+    "ISO2 Code": "GH",
+    "ISO3 Code": "GHA",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "288"
+  },
+  {
+    "Country Code": 82,
+    "Country": "Gibraltar",
+    "M49 Code": 292,
+    "ISO2 Code": "GI",
+    "ISO3 Code": "GIB",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "292"
+  },
+  {
+    "Country Code": 84,
+    "Country": "Greece",
+    "M49 Code": 300,
+    "ISO2 Code": "GR",
+    "ISO3 Code": "GRC",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "300"
+  },
+  {
+    "Country Code": 85,
+    "Country": "Greenland",
+    "M49 Code": 304,
+    "ISO2 Code": "GL",
+    "ISO3 Code": "GRL",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "304"
+  },
+  {
+    "Country Code": 86,
+    "Country": "Grenada",
+    "M49 Code": 308,
+    "ISO2 Code": "GD",
+    "ISO3 Code": "GRD",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "308"
+  },
+  {
+    "Country Code": 89,
+    "Country": "Guatemala",
+    "M49 Code": 320,
+    "ISO2 Code": "GT",
+    "ISO3 Code": "GTM",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "320"
+  },
+  {
+    "Country Code": 90,
+    "Country": "Guinea",
+    "M49 Code": 324,
+    "ISO2 Code": "GN",
+    "ISO3 Code": "GIN",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "324"
+  },
+  {
+    "Country Code": 175,
+    "Country": "Guinea-Bissau",
+    "M49 Code": 624,
+    "ISO2 Code": "GW",
+    "ISO3 Code": "GNB",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "624"
+  },
+  {
+    "Country Code": 91,
+    "Country": "Guyana",
+    "M49 Code": 328,
+    "ISO2 Code": "GY",
+    "ISO3 Code": "GUY",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "328"
+  },
+  {
+    "Country Code": 93,
+    "Country": "Haiti",
+    "M49 Code": 332,
+    "ISO2 Code": "HT",
+    "ISO3 Code": "HTI",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "332"
+  },
+  {
+    "Country Code": 95,
+    "Country": "Honduras",
+    "M49 Code": 340,
+    "ISO2 Code": "HN",
+    "ISO3 Code": "HND",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "340"
+  },
+  {
+    "Country Code": 97,
+    "Country": "Hungary",
+    "M49 Code": 348,
+    "ISO2 Code": "HU",
+    "ISO3 Code": "HUN",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "348"
+  },
+  {
+    "Country Code": 99,
+    "Country": "Iceland",
+    "M49 Code": 352,
+    "ISO2 Code": "IS",
+    "ISO3 Code": "ISL",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "352"
+  },
+  {
+    "Country Code": 100,
+    "Country": "India",
+    "M49 Code": 356,
+    "ISO2 Code": "IN",
+    "ISO3 Code": "IND",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "699"
+  },
+  {
+    "Country Code": 101,
+    "Country": "Indonesia",
+    "M49 Code": 360,
+    "ISO2 Code": "ID",
+    "ISO3 Code": "IDN",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "360"
+  },
+  {
+    "Country Code": 102,
+    "Country": "Iran (Islamic Republic of)",
+    "M49 Code": 364,
+    "ISO2 Code": "IR",
+    "ISO3 Code": "IRN",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "364"
+  },
+  {
+    "Country Code": 103,
+    "Country": "Iraq",
+    "M49 Code": 368,
+    "ISO2 Code": "IQ",
+    "ISO3 Code": "IRQ",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "368"
+  },
+  {
+    "Country Code": 104,
+    "Country": "Ireland",
+    "M49 Code": 372,
+    "ISO2 Code": "IE",
+    "ISO3 Code": "IRL",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "372"
+  },
+  {
+    "Country Code": 105,
+    "Country": "Israel",
+    "M49 Code": 376,
+    "ISO2 Code": "IL",
+    "ISO3 Code": "ISR",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "376"
+  },
+  {
+    "Country Code": 106,
+    "Country": "Italy",
+    "M49 Code": 380,
+    "ISO2 Code": "IT",
+    "ISO3 Code": "ITA",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "381"
+  },
+  {
+    "Country Code": 109,
+    "Country": "Jamaica",
+    "M49 Code": 388,
+    "ISO2 Code": "JM",
+    "ISO3 Code": "JAM",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "388"
+  },
+  {
+    "Country Code": 110,
+    "Country": "Japan",
+    "M49 Code": 392,
+    "ISO2 Code": "JP",
+    "ISO3 Code": "JPN",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "392"
+  },
+  {
+    "Country Code": 112,
+    "Country": "Jordan",
+    "M49 Code": 400,
+    "ISO2 Code": "JO",
+    "ISO3 Code": "JOR",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "400"
+  },
+  {
+    "Country Code": 108,
+    "Country": "Kazakhstan",
+    "M49 Code": 398,
+    "ISO2 Code": "KZ",
+    "ISO3 Code": "KAZ",
+    "Start Year": 1992,
+    "End Year": "",
+    "ResourceTrade_M49": "398"
+  },
+  {
+    "Country Code": 114,
+    "Country": "Kenya",
+    "M49 Code": 404,
+    "ISO2 Code": "KE",
+    "ISO3 Code": "KEN",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "404"
+  },
+  {
+    "Country Code": 83,
+    "Country": "Kiribati",
+    "M49 Code": 296,
+    "ISO2 Code": "KI",
+    "ISO3 Code": "KIR",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "296"
+  },
+  {
+    "Country Code": 118,
+    "Country": "Kuwait",
+    "M49 Code": 414,
+    "ISO2 Code": "KW",
+    "ISO3 Code": "KWT",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "414"
+  },
+  {
+    "Country Code": 113,
+    "Country": "Kyrgyzstan",
+    "M49 Code": 417,
+    "ISO2 Code": "KG",
+    "ISO3 Code": "KGZ",
+    "Start Year": 1992,
+    "End Year": "",
+    "ResourceTrade_M49": "417"
+  },
+  {
+    "Country Code": 120,
+    "Country": "Lao People's Democratic Republic",
+    "M49 Code": 418,
+    "ISO2 Code": "LA",
+    "ISO3 Code": "LAO",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "418"
+  },
+  {
+    "Country Code": 119,
+    "Country": "Latvia",
+    "M49 Code": 428,
+    "ISO2 Code": "LV",
+    "ISO3 Code": "LVA",
+    "Start Year": 1992,
+    "End Year": "",
+    "ResourceTrade_M49": "428"
+  },
+  {
+    "Country Code": 121,
+    "Country": "Lebanon",
+    "M49 Code": 422,
+    "ISO2 Code": "LB",
+    "ISO3 Code": "LBN",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "422"
+  },
+  {
+    "Country Code": 122,
+    "Country": "Lesotho",
+    "M49 Code": 426,
+    "ISO2 Code": "LS",
+    "ISO3 Code": "LSO",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "426"
+  },
+  {
+    "Country Code": 123,
+    "Country": "Liberia",
+    "M49 Code": 430,
+    "ISO2 Code": "LR",
+    "ISO3 Code": "LBR",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "430"
+  },
+  {
+    "Country Code": 124,
+    "Country": "Libya",
+    "M49 Code": 434,
+    "ISO2 Code": "LY",
+    "ISO3 Code": "LBY",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "434"
+  },
+  {
+    "Country Code": 126,
+    "Country": "Lithuania",
+    "M49 Code": 440,
+    "ISO2 Code": "LT",
+    "ISO3 Code": "LTU",
+    "Start Year": 1992,
+    "End Year": "",
+    "ResourceTrade_M49": "440"
+  },
+  {
+    "Country Code": 256,
+    "Country": "Luxembourg",
+    "M49 Code": 442,
+    "ISO2 Code": "LU",
+    "ISO3 Code": "LUX",
+    "Start Year": 2000,
+    "End Year": "",
+    "ResourceTrade_M49": "442"
+  },
+  {
+    "Country Code": 129,
+    "Country": "Madagascar",
+    "M49 Code": 450,
+    "ISO2 Code": "MG",
+    "ISO3 Code": "MDG",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "450"
+  },
+  {
+    "Country Code": 130,
+    "Country": "Malawi",
+    "M49 Code": 454,
+    "ISO2 Code": "MW",
+    "ISO3 Code": "MWI",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "454"
+  },
+  {
+    "Country Code": 131,
+    "Country": "Malaysia",
+    "M49 Code": 458,
+    "ISO2 Code": "MY",
+    "ISO3 Code": "MYS",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "458"
+  },
+  {
+    "Country Code": 132,
+    "Country": "Maldives",
+    "M49 Code": 462,
+    "ISO2 Code": "MV",
+    "ISO3 Code": "MDV",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "462"
+  },
+  {
+    "Country Code": 133,
+    "Country": "Mali",
+    "M49 Code": 466,
+    "ISO2 Code": "ML",
+    "ISO3 Code": "MLI",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "466"
+  },
+  {
+    "Country Code": 134,
+    "Country": "Malta",
+    "M49 Code": 470,
+    "ISO2 Code": "MT",
+    "ISO3 Code": "MLT",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "470"
+  },
+
+  {
+    "Country Code": 136,
+    "Country": "Mauritania",
+    "M49 Code": 478,
+    "ISO2 Code": "MR",
+    "ISO3 Code": "MRT",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "478"
+  },
+  {
+    "Country Code": 137,
+    "Country": "Mauritius",
+    "M49 Code": 480,
+    "ISO2 Code": "MU",
+    "ISO3 Code": "MUS",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "480"
+  },
+  {
+    "Country Code": 138,
+    "Country": "Mexico",
+    "M49 Code": 484,
+    "ISO2 Code": "MX",
+    "ISO3 Code": "MEX",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "484"
+  },
+  {
+    "Country Code": 5503,
+    "Country": "Micronesia",
+    "M49 Code": "057",
+    "ISO2 Code": "F5503",
+    "ISO3 Code": "F5503",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "583"
+  },
+  {
+    "Country Code": 141,
+    "Country": "Mongolia",
+    "M49 Code": 496,
+    "ISO2 Code": "MN",
+    "ISO3 Code": "MNG",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "496"
+  },
+  {
+    "Country Code": 273,
+    "Country": "Montenegro",
+    "M49 Code": 499,
+    "ISO2 Code": "ME",
+    "ISO3 Code": "MNE",
+    "Start Year": 2006,
+    "End Year": "",
+    "ResourceTrade_M49": "499"
+  },
+  {
+    "Country Code": 143,
+    "Country": "Morocco",
+    "M49 Code": 504,
+    "ISO2 Code": "MA",
+    "ISO3 Code": "MAR",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "504"
+  },
+  {
+    "Country Code": 144,
+    "Country": "Mozambique",
+    "M49 Code": 508,
+    "ISO2 Code": "MZ",
+    "ISO3 Code": "MOZ",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "508"
+  },
+  {
+    "Country Code": 28,
+    "Country": "Myanmar",
+    "M49 Code": 104,
+    "ISO2 Code": "MM",
+    "ISO3 Code": "MMR",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "104"
+  },
+  {
+    "Country Code": 147,
+    "Country": "Namibia",
+    "M49 Code": 516,
+    "ISO2 Code": "NA",
+    "ISO3 Code": "NAM",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "516"
+  },
+  {
+    "Country Code": 148,
+    "Country": "Nauru",
+    "M49 Code": 520,
+    "ISO2 Code": "NR",
+    "ISO3 Code": "NRU",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "520"
+  },
+  {
+    "Country Code": 149,
+    "Country": "Nepal",
+    "M49 Code": 524,
+    "ISO2 Code": "NP",
+    "ISO3 Code": "NPL",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "524"
+  },
+  {
+    "Country Code": 150,
+    "Country": "Netherlands (Kingdom of the)",
+    "M49 Code": 528,
+    "ISO2 Code": "NL",
+    "ISO3 Code": "NLD",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "528"
+  },
+  {
+    "Country Code": 153,
+    "Country": "New Caledonia",
+    "M49 Code": 540,
+    "ISO2 Code": "NC",
+    "ISO3 Code": "NCL",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "540"
+  },
+  {
+    "Country Code": 156,
+    "Country": "New Zealand",
+    "M49 Code": 554,
+    "ISO2 Code": "NZ",
+    "ISO3 Code": "NZL",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "554"
+  },
+  {
+    "Country Code": 157,
+    "Country": "Nicaragua",
+    "M49 Code": 558,
+    "ISO2 Code": "NI",
+    "ISO3 Code": "NIC",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "558"
+  },
+  {
+    "Country Code": 158,
+    "Country": "Niger",
+    "M49 Code": 562,
+    "ISO2 Code": "NE",
+    "ISO3 Code": "NER",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "562"
+  },
+  {
+    "Country Code": 159,
+    "Country": "Nigeria",
+    "M49 Code": 566,
+    "ISO2 Code": "NG",
+    "ISO3 Code": "NGA",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "566"
+  },
+  
+  {
+    "Country Code": 154,
+    "Country": "North Macedonia",
+    "M49 Code": 807,
+    "ISO2 Code": "MK",
+    "ISO3 Code": "MKD",
+    "Start Year": 1992,
+    "End Year": "",
+    "ResourceTrade_M49": "807"
+  },
+  {
+    "Country Code": 162,
+    "Country": "Norway",
+    "M49 Code": 578,
+    "ISO2 Code": "NO",
+    "ISO3 Code": "NOR",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "579"
+  },
+  {
+    "Country Code": 221,
+    "Country": "Oman",
+    "M49 Code": 512,
+    "ISO2 Code": "OM",
+    "ISO3 Code": "OMN",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "512"
+  },
+  {
+    "Country Code": 165,
+    "Country": "Pakistan",
+    "M49 Code": 586,
+    "ISO2 Code": "PK",
+    "ISO3 Code": "PAK",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "586"
+  },
+  {
+    "Country Code": 180,
+    "Country": "Palau",
+    "M49 Code": 585,
+    "ISO2 Code": "PW",
+    "ISO3 Code": "PLW",
+    "Start Year": 1991,
+    "End Year": "",
+    "ResourceTrade_M49": "585"
+  },
+  {
+    "Country Code": 166,
+    "Country": "Panama",
+    "M49 Code": 591,
+    "ISO2 Code": "PA",
+    "ISO3 Code": "PAN",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "591"
+  },
+  {
+    "Country Code": 168,
+    "Country": "Papua New Guinea",
+    "M49 Code": 598,
+    "ISO2 Code": "PG",
+    "ISO3 Code": "PNG",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "598"
+  },
+  {
+    "Country Code": 169,
+    "Country": "Paraguay",
+    "M49 Code": 600,
+    "ISO2 Code": "PY",
+    "ISO3 Code": "PRY",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "600"
+  },
+  {
+    "Country Code": 170,
+    "Country": "Peru",
+    "M49 Code": 604,
+    "ISO2 Code": "PE",
+    "ISO3 Code": "PER",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "604"
+  },
+  {
+    "Country Code": 171,
+    "Country": "Philippines",
+    "M49 Code": 608,
+    "ISO2 Code": "PH",
+    "ISO3 Code": "PHL",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "608"
+  },
+  {
+    "Country Code": 172,
+    "Country": "Pitcairn",
+    "M49 Code": 612,
+    "ISO2 Code": "PN",
+    "ISO3 Code": "PCN",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "612"
+  },
+  {
+    "Country Code": 173,
+    "Country": "Poland",
+    "M49 Code": 616,
+    "ISO2 Code": "PL",
+    "ISO3 Code": "POL",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "616"
+  },
+  {
+    "Country Code": 174,
+    "Country": "Portugal",
+    "M49 Code": 620,
+    "ISO2 Code": "PT",
+    "ISO3 Code": "PRT",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "620"
+  },
+  {
+    "Country Code": 179,
+    "Country": "Qatar",
+    "M49 Code": 634,
+    "ISO2 Code": "QA",
+    "ISO3 Code": "QAT",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "634"
+  },
+  {
+    "Country Code": 117,
+    "Country": "Republic of Korea",
+    "M49 Code": 410,
+    "ISO2 Code": "KR",
+    "ISO3 Code": "KOR",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "410"
+  },
+  {
+    "Country Code": 146,
+    "Country": "Republic of Moldova",
+    "M49 Code": 498,
+    "ISO2 Code": "MD",
+    "ISO3 Code": "MDA",
+    "Start Year": 1992,
+    "End Year": "",
+    "ResourceTrade_M49": "498"
+  },
+  {
+    "Country Code": 183,
+    "Country": "Romania",
+    "M49 Code": 642,
+    "ISO2 Code": "RO",
+    "ISO3 Code": "ROU",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "642"
+  },
+  {
+    "Country Code": 185,
+    "Country": "Russian Federation",
+    "M49 Code": 643,
+    "ISO2 Code": "RU",
+    "ISO3 Code": "RUS",
+    "Start Year": 1992,
+    "End Year": "",
+    "ResourceTrade_M49": "643"
+  },
+  {
+    "Country Code": 184,
+    "Country": "Rwanda",
+    "M49 Code": 646,
+    "ISO2 Code": "RW",
+    "ISO3 Code": "RWA",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "646"
+  },
+  {
+    "Country Code": 188,
+    "Country": "Saint Kitts and Nevis",
+    "M49 Code": 659,
+    "ISO2 Code": "KN",
+    "ISO3 Code": "KNA",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "659"
+  },
+  {
+    "Country Code": 189,
+    "Country": "Saint Lucia",
+    "M49 Code": 662,
+    "ISO2 Code": "LC",
+    "ISO3 Code": "LCA",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "662"
+  },
+  {
+    "Country Code": 191,
+    "Country": "Saint Vincent and the Grenadines",
+    "M49 Code": 670,
+    "ISO2 Code": "VC",
+    "ISO3 Code": "VCT",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "670"
+  },
+  {
+    "Country Code": 244,
+    "Country": "Samoa",
+    "M49 Code": 882,
+    "ISO2 Code": "WS",
+    "ISO3 Code": "WSM",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "882"
+  },
+  {
+    "Country Code": 193,
+    "Country": "Sao Tome and Principe",
+    "M49 Code": 678,
+    "ISO2 Code": "ST",
+    "ISO3 Code": "STP",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "678"
+  },
+  {
+    "Country Code": 194,
+    "Country": "Saudi Arabia",
+    "M49 Code": 682,
+    "ISO2 Code": "SA",
+    "ISO3 Code": "SAU",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "682"
+  },
+  {
+    "Country Code": 195,
+    "Country": "Senegal",
+    "M49 Code": 686,
+    "ISO2 Code": "SN",
+    "ISO3 Code": "SEN",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "686"
+  },
+  {
+    "Country Code": 272,
+    "Country": "Serbia",
+    "M49 Code": 688,
+    "ISO2 Code": "RS",
+    "ISO3 Code": "SRB",
+    "Start Year": 2006,
+    "End Year": "",
+    "ResourceTrade_M49": "688"
+  },
+
+  {
+    "Country Code": 196,
+    "Country": "Seychelles",
+    "M49 Code": 690,
+    "ISO2 Code": "SC",
+    "ISO3 Code": "SYC",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "690"
+  },
+  {
+    "Country Code": 197,
+    "Country": "Sierra Leone",
+    "M49 Code": 694,
+    "ISO2 Code": "SL",
+    "ISO3 Code": "SLE",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "694"
+  },
+  {
+    "Country Code": 200,
+    "Country": "Singapore",
+    "M49 Code": 702,
+    "ISO2 Code": "SG",
+    "ISO3 Code": "SGP",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "702"
+  },
+  {
+    "Country Code": 280,
+    "Country": "Sint Maarten (Dutch part)",
+    "M49 Code": 534,
+    "ISO2 Code": "F280",
+    "ISO3 Code": "SXM",
+    "Start Year": 2011,
+    "End Year": "",
+    "ResourceTrade_M49": "534"
+  },
+  {
+    "Country Code": 199,
+    "Country": "Slovakia",
+    "M49 Code": 703,
+    "ISO2 Code": "SK",
+    "ISO3 Code": "SVK",
+    "Start Year": 1993,
+    "End Year": "",
+    "ResourceTrade_M49": "703"
+  },
+  {
+    "Country Code": 198,
+    "Country": "Slovenia",
+    "M49 Code": 705,
+    "ISO2 Code": "SI",
+    "ISO3 Code": "SVN",
+    "Start Year": 1992,
+    "End Year": "",
+    "ResourceTrade_M49": "705"
+  },
+  {
+    "Country Code": 25,
+    "Country": "Solomon Islands",
+    "M49 Code": "090",
+    "ISO2 Code": "SB",
+    "ISO3 Code": "SLB",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "90"
+  },
+  {
+    "Country Code": 201,
+    "Country": "Somalia",
+    "M49 Code": 706,
+    "ISO2 Code": "SO",
+    "ISO3 Code": "SOM",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "706"
+  },
+  {
+    "Country Code": 202,
+    "Country": "South Africa",
+    "M49 Code": 710,
+    "ISO2 Code": "ZA",
+    "ISO3 Code": "ZAF",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "710"
+  },
+  {
+    "Country Code": 277,
+    "Country": "South Sudan",
+    "M49 Code": 728,
+    "ISO2 Code": "SS",
+    "ISO3 Code": "SSD",
+    "Start Year": 2012,
+    "End Year": "",
+    "ResourceTrade_M49": "728"
+  },
+  {
+    "Country Code": 203,
+    "Country": "Spain",
+    "M49 Code": 724,
+    "ISO2 Code": "ES",
+    "ISO3 Code": "ESP",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "724"
+  },
+  {
+    "Country Code": 38,
+    "Country": "Sri Lanka",
+    "M49 Code": 144,
+    "ISO2 Code": "LK",
+    "ISO3 Code": "LKA",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "144"
+  },
+  {
+    "Country Code": 276,
+    "Country": "Sudan",
+    "M49 Code": 729,
+    "ISO2 Code": "SD",
+    "ISO3 Code": "SDN",
+    "Start Year": 2012,
+    "End Year": "",
+    "ResourceTrade_M49": "729"
+  },
+  {
+    "Country Code": 206,
+    "Country": "Sudan (former)",
+    "M49 Code": 736,
+    "ISO2 Code": "F206",
+    "ISO3 Code": "F206",
+    "Start Year": "",
+    "End Year": 2011,
+    "ResourceTrade_M49": "736"
+  },
+  {
+    "Country Code": 207,
+    "Country": "Suriname",
+    "M49 Code": 740,
+    "ISO2 Code": "SR",
+    "ISO3 Code": "SUR",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "740"
+  },
+  {
+    "Country Code": 210,
+    "Country": "Sweden",
+    "M49 Code": 752,
+    "ISO2 Code": "SE",
+    "ISO3 Code": "SWE",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "752"
+  },
+  {
+    "Country Code": 211,
+    "Country": "Switzerland",
+    "M49 Code": 756,
+    "ISO2 Code": "CH",
+    "ISO3 Code": "CHE",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "757"
+  },
+  {
+    "Country Code": 212,
+    "Country": "Syrian Arab Republic",
+    "M49 Code": 760,
+    "ISO2 Code": "SY",
+    "ISO3 Code": "SYR",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "760"
+  },
+  {
+    "Country Code": 208,
+    "Country": "Tajikistan",
+    "M49 Code": 762,
+    "ISO2 Code": "TJ",
+    "ISO3 Code": "TJK",
+    "Start Year": 1992,
+    "End Year": "",
+    "ResourceTrade_M49": "762"
+  },
+  {
+    "Country Code": 216,
+    "Country": "Thailand",
+    "M49 Code": 764,
+    "ISO2 Code": "TH",
+    "ISO3 Code": "THA",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "764"
+  },
+  {
+    "Country Code": 176,
+    "Country": "Timor-Leste",
+    "M49 Code": 626,
+    "ISO2 Code": "TL",
+    "ISO3 Code": "TLS",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "626"
+  },
+  {
+    "Country Code": 217,
+    "Country": "Togo",
+    "M49 Code": 768,
+    "ISO2 Code": "TG",
+    "ISO3 Code": "TGO",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "768"
+  },
+  {
+    "Country Code": 218,
+    "Country": "Tokelau",
+    "M49 Code": 772,
+    "ISO2 Code": "TK",
+    "ISO3 Code": "TKL",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "772"
+  },
+  {
+    "Country Code": 219,
+    "Country": "Tonga",
+    "M49 Code": 776,
+    "ISO2 Code": "TO",
+    "ISO3 Code": "TON",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "776"
+  },
+  {
+    "Country Code": 220,
+    "Country": "Trinidad and Tobago",
+    "M49 Code": 780,
+    "ISO2 Code": "TT",
+    "ISO3 Code": "TTO",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "780"
+  },
+  {
+    "Country Code": 222,
+    "Country": "Tunisia",
+    "M49 Code": 788,
+    "ISO2 Code": "TN",
+    "ISO3 Code": "TUN",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "788"
+  },
+  {
+    "Country Code": 223,
+    "Country": "Turkey",
+    "M49 Code": 792,
+    "ISO2 Code": "TR",
+    "ISO3 Code": "TUR",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "792"
+  },
+  {
+    "Country Code": 213,
+    "Country": "Turkmenistan",
+    "M49 Code": 795,
+    "ISO2 Code": "TM",
+    "ISO3 Code": "TKM",
+    "Start Year": 1992,
+    "End Year": "",
+    "ResourceTrade_M49": "765"
+  },
+  {
+    "Country Code": 226,
+    "Country": "Uganda",
+    "M49 Code": 800,
+    "ISO2 Code": "UG",
+    "ISO3 Code": "UGA",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "800"
+  },
+  {
+    "Country Code": 230,
+    "Country": "Ukraine",
+    "M49 Code": 804,
+    "ISO2 Code": "UA",
+    "ISO3 Code": "UKR",
+    "Start Year": 1992,
+    "End Year": "",
+    "ResourceTrade_M49": "804"
+  },
+  {
+    "Country Code": 225,
+    "Country": "United Arab Emirates",
+    "M49 Code": 784,
+    "ISO2 Code": "AE",
+    "ISO3 Code": "ARE",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "784"
+  },
+  {
+    "Country Code": 229,
+    "Country": "United Kingdom of Great Britain and Northern Ireland",
+    "M49 Code": 826,
+    "ISO2 Code": "GB",
+    "ISO3 Code": "GBR",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "826"
+  },
+  {
+    "Country Code": 215,
+    "Country": "United Republic of Tanzania",
+    "M49 Code": 834,
+    "ISO2 Code": "TZ",
+    "ISO3 Code": "TZA",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "834"
+  },
+  {
+    "Country Code": 231,
+    "Country": "United States of America",
+    "M49 Code": 840,
+    "ISO2 Code": "US",
+    "ISO3 Code": "USA",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "842"
+  },
+  {
+    "Country Code": 234,
+    "Country": "Uruguay",
+    "M49 Code": 858,
+    "ISO2 Code": "UY",
+    "ISO3 Code": "URY",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "858"
+  },
+  {
+    "Country Code": 228,
+    "Country": "USSR",
+    "M49 Code": 810,
+    "ISO2 Code": "F228",
+    "ISO3 Code": "F228",
+    "Start Year": "",
+    "End Year": 1991
+  },
+  {
+    "Country Code": 235,
+    "Country": "Uzbekistan",
+    "M49 Code": 860,
+    "ISO2 Code": "UZ",
+    "ISO3 Code": "UZB",
+    "Start Year": 1992,
+    "End Year": "",
+    "ResourceTrade_M49": "860"
+  },
+  {
+    "Country Code": 155,
+    "Country": "Vanuatu",
+    "M49 Code": 548,
+    "ISO2 Code": "VU",
+    "ISO3 Code": "VUT",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "548"
+  },
+  {
+    "Country Code": 236,
+    "Country": "Venezuela (Bolivarian Republic of)",
+    "M49 Code": 862,
+    "ISO2 Code": "VE",
+    "ISO3 Code": "VEN",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "862"
+  },
+  {
+    "Country Code": 237,
+    "Country": "Viet Nam",
+    "M49 Code": 704,
+    "ISO2 Code": "VN",
+    "ISO3 Code": "VNM",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "704"
+  },
+  {
+    "Country Code": 249,
+    "Country": "Yemen",
+    "M49 Code": 887,
+    "ISO2 Code": "YE",
+    "ISO3 Code": "YEM",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "887"
+  },
+  {
+    "Country Code": 248,
+    "Country": "Yugoslav SFR",
+    "M49 Code": 890,
+    "ISO2 Code": "F248",
+    "ISO3 Code": "F248",
+    "Start Year": "",
+    "End Year": 1991
+  },
+  {
+    "Country Code": 251,
+    "Country": "Zambia",
+    "M49 Code": 894,
+    "ISO2 Code": "ZM",
+    "ISO3 Code": "ZMB",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "894"
+  },
+  {
+    "Country Code": 181,
+    "Country": "Zimbabwe",
+    "M49 Code": 716,
+    "ISO2 Code": "ZW",
+    "ISO3 Code": "ZWE",
+    "Start Year": "",
+    "End Year": "",
+    "ResourceTrade_M49": "716"
+  }
+]
