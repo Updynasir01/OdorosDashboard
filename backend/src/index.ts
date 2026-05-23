@@ -15,40 +15,57 @@ dotenv.config()
 const app = express()
 const PORT = process.env.PORT || 5000
 
+/** Local dev + known production frontends (Vercel). */
+const DEFAULT_ALLOWED_ORIGINS = [
+  'http://localhost:3000',
+  'http://localhost:5173',
+  'https://odoros-dashboard.vercel.app',
+]
+
+function parseAllowedOrigins(): string[] {
+  const fromEnv = process.env.CORS_ORIGIN
+    ? process.env.CORS_ORIGIN.split(',').map((o) => o.trim()).filter(Boolean)
+    : []
+  return [...new Set([...DEFAULT_ALLOWED_ORIGINS, ...fromEnv])]
+}
+
+function isOriginAllowed(origin: string, allowed: string[]): boolean {
+  if (allowed.includes(origin)) return true
+  // Allow any Vercel preview/production URL for this project
+  if (/^https:\/\/[\w-]+\.vercel\.app$/.test(origin)) return true
+  return false
+}
+
 // Connect to MongoDB
 connectDB()
 
 // Middleware
-const allowedOrigins = process.env.CORS_ORIGIN 
-  ? process.env.CORS_ORIGIN.split(',').map(origin => origin.trim())
-  : ['http://localhost:3000', 'http://localhost:5173']
+const allowedOrigins = parseAllowedOrigins()
 
-console.log('🌐 CORS allowed origins:', allowedOrigins)
+console.log('🌐 CORS allowed origins:', allowedOrigins.join(', '))
 
-app.use(cors({
-  origin: (origin, callback) => {
-    // Allow requests with no origin (like mobile apps or curl requests)
-    if (!origin) {
-      console.log('⚠️ Request with no origin - allowing')
-      return callback(null, true)
-    }
-    
-    // In development, allow all origins
-    if (process.env.NODE_ENV !== 'production') {
-      return callback(null, true)
-    }
-    
-    // In production, check if origin is in allowed list
-    if (allowedOrigins.indexOf(origin) !== -1) {
-      console.log(`✅ CORS allowed for origin: ${origin}`)
-      callback(null, true)
-    } else {
-      console.log(`❌ CORS blocked for origin: ${origin}. Allowed origins: ${allowedOrigins.join(', ')}`)
-      callback(new Error(`Not allowed by CORS. Origin: ${origin}`))
-    }
-  },
-  credentials: true,
-}))
+app.use(
+  cors({
+    origin: (origin, callback) => {
+      // Allow requests with no origin (curl, health checks, server-to-server)
+      if (!origin) {
+        return callback(null, true)
+      }
+
+      if (process.env.NODE_ENV !== 'production') {
+        return callback(null, true)
+      }
+
+      if (isOriginAllowed(origin, allowedOrigins)) {
+        return callback(null, true)
+      }
+
+      console.log(`❌ CORS blocked for origin: ${origin}. Allowed: ${allowedOrigins.join(', ')} (+ *.vercel.app)`)
+      return callback(null, false)
+    },
+    credentials: true,
+  })
+)
 app.use(express.json())
 
 // Routes
@@ -69,7 +86,7 @@ app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`)
   console.log(`🌍 Environment: ${process.env.NODE_ENV || 'development'}`)
   if (process.env.NODE_ENV === 'production') {
-    console.log(`✅ Production mode - CORS enabled for: ${process.env.CORS_ORIGIN || 'all origins'}`)
+    console.log(`✅ Production mode - CORS: ${allowedOrigins.join(', ')} + *.vercel.app`)
   }
 })
 
