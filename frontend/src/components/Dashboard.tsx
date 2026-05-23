@@ -87,8 +87,20 @@ function Dashboard() {
                   <a href="#" className="p-2 rounded-md bg-white/10 hover:bg-white/20"><Linkedin className="w-4 h-4" /></a>
                 </div>
                 <div className="flex flex-col items-start gap-3">
-                  <img src="/irisehub-logo.jpeg" alt="IriseHub" className="h-8 w-auto object-contain" />
-                  <img src="/odorosLogo.jpeg" alt="Odoros" className="h-12 w-auto object-contain mix-blend-screen opacity-95" />
+                  <div className="rounded-lg bg-white px-3 py-2 shadow-sm">
+                    <img
+                      src="/irisehubLogo.png"
+                      alt="IriseHub"
+                      className="h-9 w-auto max-w-[200px] object-contain"
+                    />
+                  </div>
+                  <div className="rounded-lg bg-white px-3 py-2 shadow-sm">
+                    <img
+                      src="/odoros-logo.png"
+                      alt="Odoros"
+                      className="h-9 w-auto max-w-[200px] object-contain"
+                    />
+                  </div>
                 </div>
               </div>
 
