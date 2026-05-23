@@ -32,6 +32,9 @@ const REGION_ID_TO_SIMPLEMAP_CODE: Record<string, string> = Object.entries(SIMPL
 
 const MAP_CONTAINER_ID = 'somalia-simplemap'
 
+const MAP_LABEL_FONT =
+  'Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
+
 export function getSimplemapContainerId(): string {
   return MAP_CONTAINER_ID
 }
@@ -73,10 +76,13 @@ export function loadSomaliaSimplemapsScripts(): Promise<void> {
     m.auto_load = 'no'
     // Allow built-in state zoom on click (used by the AgMet page map UX).
     m.all_states_zoomable = 'yes'
+    m.all_locations_hidden = 'yes'
     // Dark labels so names stay readable on yellow/orange/green region fills (library default is white)
     m.label_color = '#111827'
     m.label_hover_color = '#000000'
-    m.label_line_color = '#111827'
+    m.label_line_color = 'transparent'
+    m.label_size = 14
+    m.label_font = MAP_LABEL_FONT
     for (const key of Object.keys(md.state_specific)) {
       md.state_specific[key].url = ''
     }
@@ -126,6 +132,27 @@ type SimplemapsApi = {
   loaded?: boolean
 }
 
+/** Crisp, readable SVG labels after Simplemaps paints the map. */
+export function polishSimplemapLabels(): void {
+  const root = document.getElementById(MAP_CONTAINER_ID)
+  if (!root) return
+
+  root.querySelectorAll('svg text').forEach((node) => {
+    const el = node as SVGTextElement
+    el.setAttribute('font-family', MAP_LABEL_FONT)
+    el.setAttribute('font-weight', '600')
+    el.setAttribute('letter-spacing', '0.02em')
+    el.setAttribute('text-rendering', 'geometricPrecision')
+    el.setAttribute('paint-order', 'stroke fill')
+    el.setAttribute('stroke', 'rgba(255, 255, 255, 0.9)')
+    el.setAttribute('stroke-width', '2.5')
+    el.setAttribute('stroke-linejoin', 'round')
+    el.setAttribute('fill', '#111827')
+    el.setAttribute('text-anchor', 'middle')
+    el.setAttribute('dominant-baseline', 'central')
+  })
+}
+
 export function applyRegionsToSimplemap(
   regions: Region[],
   selectedRegion: string | null,
@@ -159,6 +186,8 @@ export function applyRegionsToSimplemap(
   if (typeof api.refresh === 'function') {
     api.refresh()
   }
+
+  requestAnimationFrame(() => polishSimplemapLabels())
 }
 
 export function attachSimplemapClickHandler(onSelect: (regionId: string) => void): void {

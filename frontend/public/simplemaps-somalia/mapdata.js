@@ -28,13 +28,13 @@ var simplemaps_countrymap_mapdata={
     location_border: 2,
     location_hover_border: 2.5,
     all_locations_inactive: "no",
-    all_locations_hidden: "no",
+    all_locations_hidden: "yes",
     
 		//Label defaults
 		label_color: "#111827",
     label_hover_color: "#000000",
-    label_size: 22,
-    label_font: "Arial",
+    label_size: 14,
+    label_font: "Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif",
     hide_labels: "no",
     hide_eastern_labels: false,
    
@@ -130,7 +130,7 @@ var simplemaps_countrymap_mapdata={
       url: "default"
     },
     SOJD: {
-      name: "Middle Juba",
+      name: "Mid. Juba",
       description: "default",
       color: "default",
       hover_color: "default",
@@ -165,7 +165,7 @@ var simplemaps_countrymap_mapdata={
       url: "default"
     },
     SOSD: {
-      name: "Middle Shabelle",
+      name: "Mid. Shabelle",
       description: "default",
       color: "default",
       hover_color: "default",
@@ -193,7 +193,7 @@ var simplemaps_countrymap_mapdata={
       url: "default"
     },
     SOWO: {
-      name: "Woqooyi Galbeed",
+      name: "Woqooyi G.",
       description: "default",
       color: "default",
       hover_color: "default",
@@ -241,7 +241,7 @@ var simplemaps_countrymap_mapdata={
       parent_id: "SOHI"
     },
     SOJD: {
-      name: "Middle Juba",
+      name: "Mid. Juba",
       parent_id: "SOJD"
     },
     SOJH: {
@@ -261,7 +261,7 @@ var simplemaps_countrymap_mapdata={
       parent_id: "SOSA"
     },
     SOSD: {
-      name: "Middle Shabelle",
+      name: "Mid. Shabelle",
       parent_id: "SOSD"
     },
     SOSH: {
@@ -277,7 +277,7 @@ var simplemaps_countrymap_mapdata={
       parent_id: "SOTO"
     },
     SOWO: {
-      name: "Woqooyi Galbeed",
+      name: "Woqooyi G.",
       parent_id: "SOWO"
     }
   }

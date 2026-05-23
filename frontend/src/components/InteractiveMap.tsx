@@ -6,6 +6,7 @@ import {
   attachSimplemapClickHandler,
   getSimplemapContainerId,
   loadSomaliaSimplemapsScripts,
+  polishSimplemapLabels,
   SIMPLEMAP_CODE_TO_REGION_ID,
   zoomSimplemapToRegion,
 } from '../utils/somaliaSimplemaps'
@@ -146,6 +147,7 @@ function InteractiveMap({ regions, selectedRegion, onRegionSelect, loading }: In
           applyRegionsToSimplemap(regionsRef.current, selectedRegionRef.current, (level) =>
             t(`drought.${level}`)
           )
+          requestAnimationFrame(() => polishSimplemapLabels())
         }
         api.load()
       })
