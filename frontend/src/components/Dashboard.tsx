@@ -10,6 +10,18 @@ import TimeSeriesAnalytics from './TimeSeriesAnalytics'
 import AlertsPanel from './AlertsPanel'
 import { apiService } from '../services/api'
 
+function ModuleLink({ to, title, description }: { to: string; title: string; description: string }) {
+  return (
+    <Link
+      to={to}
+      className="block rounded-xl border border-gray-200 bg-white p-5 shadow-sm hover:border-[#05556c]/40 hover:shadow-md transition-all"
+    >
+      <p className="font-semibold text-[#05556c]">{title}</p>
+      <p className="text-sm text-gray-500 mt-1">{description}</p>
+    </Link>
+  )
+}
+
 function Dashboard() {
   const { t } = useLanguage()
   const [selectedRegion, setSelectedRegion] = useState<string | null>(null)
@@ -67,6 +79,21 @@ function Dashboard() {
           </div>
         </div>
 
+        {/* Harvest2Market modules */}
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
+          <ModuleLink
+            to="/crop-monitor"
+            title="Crop Monitor"
+            description="GEOGLAM crop conditions map and event reports"
+          />
+          <ModuleLink
+            to="/fews"
+            title="FEWS NET"
+            description="IPC food insecurity, population in crisis, market prices"
+          />
+          <ModuleLink to="/trade" title="Trade flows" description="Somalia agricultural import and export data" />
+        </div>
+
         {/* Time Series Analytics */}
         <div className="mt-6">
           <TimeSeriesAnalytics regionId={selectedRegion || undefined} />
@@ -109,6 +136,8 @@ function Dashboard() {
                 <div className="space-y-2 text-sm">
                   <Link to="/" className="block hover:underline">Drought dashboard</Link>
                   <Link to="/odoros" className="block hover:underline">Odoros crop charts</Link>
+                  <Link to="/crop-monitor" className="block hover:underline">Crop Monitor</Link>
+                  <Link to="/fews" className="block hover:underline">FEWS NET</Link>
                   <Link to="/trade" className="block hover:underline">Trade flows</Link>
                 </div>
               </div>

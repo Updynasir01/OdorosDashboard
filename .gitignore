@@ -29,6 +29,10 @@ Thumbs.db
 *.db
 *.sqlite
 
+# Admin uploads (keep uploads/.gitkeep)
+backend/uploads/*
+!backend/uploads/.gitkeep
+
 # Python
 *.egg-info/
 .pytest_cache/

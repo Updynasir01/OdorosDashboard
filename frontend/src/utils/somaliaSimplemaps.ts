@@ -31,6 +31,28 @@ const REGION_ID_TO_SIMPLEMAP_CODE: Record<string, string> = Object.entries(SIMPL
 )
 
 const MAP_CONTAINER_ID = 'somalia-simplemap'
+export const REFERENCE_MAP_CONTAINER_ID = 'somalia-reference-map'
+
+const GOBOL_DISPLAY_NAMES: Record<string, string> = {
+  awdal: 'Awdal',
+  banadir: 'Banadir',
+  bay: 'Bay',
+  bakool: 'Bakool',
+  hiiraan: 'Hiiraan',
+  'middle-jubba': 'Middle Jubba',
+  'lower-jubba': 'Lower Jubba',
+  gedo: 'Gedo',
+  'middle-shebelle': 'Middle Shebelle',
+  'lower-shebelle': 'Lower Shebelle',
+  galgaduud: 'Galgaduud',
+  mudug: 'Mudug',
+  nugaal: 'Nugaal',
+  bari: 'Bari',
+  sanaag: 'Sanaag',
+  sool: 'Sool',
+  togdheer: 'Togdheer',
+  'woqooyi-galbeed': 'Woqooyi Galbeed',
+}
 
 const MAP_LABEL_FONT =
   'Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
@@ -55,40 +77,44 @@ function appendScript(src: string): Promise<void> {
   })
 }
 
-let loadPromise: Promise<void> | null = null
+let scriptsPromise: Promise<void> | null = null
 
-/** Loads Simplemaps mapdata + countrymap once (from /public). */
-export function loadSomaliaSimplemapsScripts(): Promise<void> {
-  if (loadPromise) return loadPromise
-  loadPromise = (async () => {
-    await appendScript('/simplemaps-somalia/mapdata.js')
-    const w = window as unknown as {
-      simplemaps_countrymap_mapdata?: {
-        main_settings: Record<string, unknown>
-        state_specific: Record<string, { url?: string }>
-      }
+function configureSimplemapContainer(containerId: string): void {
+  const w = window as unknown as {
+    simplemaps_countrymap_mapdata?: {
+      main_settings: Record<string, unknown>
+      state_specific: Record<string, { url?: string }>
     }
-    if (!w.simplemaps_countrymap_mapdata) return
-    const md = w.simplemaps_countrymap_mapdata
-    const m = md.main_settings
-    m.div = MAP_CONTAINER_ID
-    m.url_new_tab = 'no'
-    m.auto_load = 'no'
-    // Allow built-in state zoom on click (used by the AgMet page map UX).
-    m.all_states_zoomable = 'yes'
-    m.all_locations_hidden = 'yes'
-    // Dark labels so names stay readable on yellow/orange/green region fills (library default is white)
-    m.label_color = '#111827'
-    m.label_hover_color = '#000000'
-    m.label_line_color = 'transparent'
-    m.label_size = 14
-    m.label_font = MAP_LABEL_FONT
-    for (const key of Object.keys(md.state_specific)) {
-      md.state_specific[key].url = ''
-    }
-    await appendScript('/simplemaps-somalia/countrymap.js')
-  })()
-  return loadPromise
+  }
+  if (!w.simplemaps_countrymap_mapdata) return
+  const md = w.simplemaps_countrymap_mapdata
+  const m = md.main_settings
+  m.div = containerId
+  m.url_new_tab = 'no'
+  m.auto_load = 'no'
+  m.all_states_zoomable = 'yes'
+  m.all_locations_hidden = 'yes'
+  m.label_color = '#111827'
+  m.label_hover_color = '#000000'
+  m.label_line_color = 'transparent'
+  m.label_size = 14
+  m.label_font = MAP_LABEL_FONT
+  for (const key of Object.keys(md.state_specific)) {
+    md.state_specific[key].url = ''
+  }
+}
+
+/** Loads Simplemaps scripts once, then targets the given container div. */
+export function loadSomaliaSimplemapsScripts(containerId: string = MAP_CONTAINER_ID): Promise<void> {
+  if (!scriptsPromise) {
+    scriptsPromise = (async () => {
+      await appendScript('/simplemaps-somalia/mapdata.js')
+      await appendScript('/simplemaps-somalia/countrymap.js')
+    })()
+  }
+  return scriptsPromise.then(() => {
+    configureSimplemapContainer(containerId)
+  })
 }
 
 export function getDroughtHex(level: DroughtLevel): string {
@@ -133,8 +159,8 @@ type SimplemapsApi = {
 }
 
 /** Crisp, readable SVG labels after Simplemaps paints the map. */
-export function polishSimplemapLabels(): void {
-  const root = document.getElementById(MAP_CONTAINER_ID)
+export function polishSimplemapLabels(containerId: string = MAP_CONTAINER_ID): void {
+  const root = document.getElementById(containerId)
   if (!root) return
 
   root.querySelectorAll('svg text').forEach((node) => {
@@ -187,7 +213,28 @@ export function applyRegionsToSimplemap(
     api.refresh()
   }
 
-  requestAnimationFrame(() => polishSimplemapLabels())
+  requestAnimationFrame(() => polishSimplemapLabels(MAP_CONTAINER_ID))
+}
+
+/** Neutral gobol outline map for reference panels (e.g. Crop Monitor). */
+export function applyNeutralReferenceMap(containerId: string = REFERENCE_MAP_CONTAINER_ID): void {
+  const w = window as unknown as { simplemaps_countrymap?: SimplemapsApi }
+  const api = w.simplemaps_countrymap
+  if (!api?.mapdata?.state_specific) return
+
+  for (const [code, regionId] of Object.entries(SIMPLEMAP_CODE_TO_REGION_ID)) {
+    const st = api.mapdata.state_specific[code]
+    if (!st) continue
+    st.color = '#e0f2f1'
+    st.hover_color = '#b2dfdb'
+    st.description = GOBOL_DISPLAY_NAMES[regionId] || regionId.replace(/-/g, ' ')
+  }
+
+  if (typeof api.refresh === 'function') {
+    api.refresh()
+  }
+
+  requestAnimationFrame(() => polishSimplemapLabels(containerId))
 }
 
 export function attachSimplemapClickHandler(onSelect: (regionId: string) => void): void {
@@ -200,8 +247,8 @@ export function attachSimplemapClickHandler(onSelect: (regionId: string) => void
   }
 }
 
-function getMapSvg(): SVGSVGElement | null {
-  const root = document.getElementById(MAP_CONTAINER_ID)
+function getMapSvg(containerId: string = MAP_CONTAINER_ID): SVGSVGElement | null {
+  const root = document.getElementById(containerId)
   if (!root) return null
   return root.querySelector('svg')
 }
@@ -222,8 +269,8 @@ function ensureOriginalViewBox(svg: SVGSVGElement): string {
   return initial
 }
 
-export function zoomSimplemapToRegion(regionId: string | null): void {
-  const svg = getMapSvg()
+export function zoomSimplemapToRegion(regionId: string | null, containerId: string = MAP_CONTAINER_ID): void {
+  const svg = getMapSvg(containerId)
   if (!svg) return
   const original = ensureOriginalViewBox(svg)
 

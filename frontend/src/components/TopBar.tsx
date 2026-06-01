@@ -138,6 +138,12 @@ function TopBar({ selectedRegion, onRegionChange, dateRange, onDateRangeChange }
           <Link to="/odoros" className={navLinkClass(location.pathname === '/odoros')}>
             Odoros crops
           </Link>
+          <Link to="/crop-monitor" className={navLinkClass(location.pathname === '/crop-monitor')}>
+            Crop Monitor
+          </Link>
+          <Link to="/fews" className={navLinkClass(location.pathname === '/fews')}>
+            FEWS NET
+          </Link>
           <Link to="/trade" className={navLinkClass(location.pathname === '/trade')}>
             Trade flows
           </Link>
